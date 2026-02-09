@@ -13,20 +13,23 @@ function toggleMenu() {
 }
 </script>
 <body>
-
+<div class="page-watermark">
+  <div class="hero-banner"></div>
 <header>
   <div class="container nav">
     <div class="nav-left">
       <img src="images/logo.png" alt="Quondong Consulting logo">
       <div class="nav-title">Quondong Consulting</div>
     </div>
-<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-<li><a href="services.html">Our Services</a></li>
-<li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -49,7 +52,10 @@ function toggleMenu() {
       </div>
     </div>
   </section>
-
+<!-- PAGE-SPECIFIC IMAGE FOR HOME -->
+<img src="images/mtgillenatsunset.jpg"
+     alt="Mt Gillen at sunset"
+     style="width:100%; margin:20px 0;">
   <!-- ABOUT US -->
   <section id="about">
     <div class="container">
@@ -250,10 +256,11 @@ function toggleMenu() {
     <span>Central Australia & Barkly Regions</span>
   </div>
 </footer>
-
+</div> <!-- closes page-watermark -->
 </body>
 
 </html>
+
 
 
 
