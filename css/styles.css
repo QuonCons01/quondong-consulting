@@ -47,8 +47,8 @@ header {
 }
 
 .nav-logo {
-  height: 60px;
-  width: auto;
+  max-width: 25%;
+  height: auto;
 }
 
 .nav-title {
