@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quondong Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --qc-red: #C62828;
+      --qc-ochre: #D96F32;
+      --qc-deep-blue: #12324A;
+      --qc-sand: #F4E4CF;
+      --qc-charcoal: #222222;
+      --qc-light: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--qc-charcoal);
+      background-color: #faf7f3;
+      line-height: 1.6;
+    }
+
+    a { color: var(--qc-red); text-decoration: none; }
+
+    header {
+      background-color: var(--qc-light);
+      border-bottom: 1px solid #e0d6c7;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo { height: 44px; width: auto; }
+
+    .nav-title {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--qc-deep-blue);
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav a { font-weight: 500; color: var(--qc-charcoal); }
+    .nav a:hover { color: var(--qc-red); }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(18,50,74,0.9), rgba(198,40,40,0.85)),
+                  url('hero-photo.jpg') center/cover no-repeat;
+      color: var(--qc-light);
+      padding: 5rem 0 4rem;
+    }
+
+    .hero-inner { max-width: 720px; }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #ffddc2;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      max-width: 640px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--qc-ochre);
+      color: var(--qc-light);
+      border-color: var(--qc-ochre);
+    }
+
+    .btn-primary:hover {
+      background-color: #c25f27;
+      border-color: #c25f27;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--qc-light);
+      border-color: #ffddc2;
+    }
+
+    .btn-secondary:hover { background-color: rgba(255,255,255,0.08); }
+
+    section { padding: 3.5rem 0; }
+    section:nth-of-type(even) { background-color: var(--qc-sand); }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+      color: var(--qc-deep-blue);
+    }
+
+    .section-intro {
+      max-width: 720px;
+      margin-bottom: 2rem;
+      color: #4a4a4a;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      background-color: var(--qc-light);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      border: 1px solid #e5d9c9;
+    }
+
+    .bio-heading {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--qc-deep-blue);
+    }
+
+    .bio-subtitle {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #8a6b4a;
+      margin-bottom: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--qc-deep-blue);
+    }
+
+    .service-card ul {
+      list-style: disc;
+      margin-left: 1.1rem;
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .highlight-strip {
+      background-color: var(--qc-deep-blue);
+      color: var(--qc-light);
+      padding: 1.5rem 0;
+    }
+
+    .highlight-strip-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.98rem;
+    }
+
+    .highlight-strip span { opacity: 0.9; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
+      gap: 2rem;
+    }
+
+    .contact-details p { margin-bottom: 0.4rem; }
+    .contact-details strong { font-weight: 600; }
+
+    form { display: grid; gap: 0.9rem; }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.4rem;
+      border: 1px solid #d2c4b2;
+      font: inherit;
+      resize: vertical;
+      min-height: 42px;
+      background-color: #fdf9f4;
+    }
+
+    textarea { min-height: 120px; }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid var(--qc-ochre);
+      border-color: var(--qc-ochre);
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: var(--qc-charcoal);
+      color: #ddd;
+      padding: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+
+    footer .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .nav ul { gap: 1rem; font-size: 0.85rem; }
+      .hero { padding: 3.5rem 0 3rem; }
+      .hero h1 { font-size: 2rem; }
+      .two-column,
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .nav { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="nav-left">
+      <img src="logo.png" alt="Quondong Consulting logo" class="nav-logo">
+      <div class="nav-title">Quondong Consulting</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">Central Australia & Barkly Regions</div>
+      <h1>Strengthening regional communities through strategic insight and practical solutions.</h1>
+      <p>
+        Quondong Consulting partners with government, non‑government organisations and communities to design and deliver
+        strategies that improve services, build local capacity and support sustainable regional development across the arid zone.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start a conversation</a>
+        <a href="#services" class="btn-secondary">Explore our services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-intro">
+        Quondong Consulting is a Northern Territory‑based advisory service specialising in regional development, service
+        improvement and community‑focused strategy. We work alongside organisations to strengthen capability, improve
+        outcomes and support long‑term, locally driven change.
+      </p>
+
+      <div class="two-column">
+        <div>
+          <div class="card">
+            <div class="bio-heading">John Gaynor</div>
+            <div class="bio-subtitle">Director, Quondong Consulting</div>
+            <p>
+              John Gaynor brings more than three decades of senior leadership, policy expertise and community‑focused
+              service delivery across Central Australia and the Barkly regions. With formal qualifications in Social Work,
+              Applied Management and specialised training in governance, health and human service delivery, natural resource
+              management, emergency operations and incident planning, he offers a rare blend of strategic insight, operational
+              capability and deep regional understanding.
+            </p>
+            <p>
+              John’s career spans executive roles in the Northern Territory Government, including Senior Executive Director
+              within the Department of the Chief Minister and Cabinet and Regional Director for the Department of Environment,
+              Parks and Water Security. He has led complex cross‑agency initiatives, overseen multimillion‑dollar programs,
+              shaped regional policy, and represented the NT at national forums. His earlier leadership roles in local
+              government, health and community services, Commonwealth agencies and ministerial advisory positions further
+              demonstrate his ability to navigate political, cultural and organisational landscapes with skill and diplomacy.
+            </p>
+            <p>
+              John’s deep insight into issues affecting the arid zone—including economic development and remote area service
+              delivery—has been honed by years of face‑to‑face work and engagement with people on the ground, in remote
+              communities and towns across the NT.
+            </p>
+            <p>
+              As Director of Quondong Consulting, John leverages this extensive experience to help government and non‑government
+              organisations and communities design and implement strategies that strengthen service delivery, build local
+              capacity and drive economic development.
+            </p>
+            <p>
+              John’s wide professional network built over 30 years and his breadth of knowledge and understanding of regional
+              and community issues across sectors guarantees thorough analysis, consultation and attention to detail. His
+              strengths in collaboration, stakeholder engagement, strategic planning and culturally informed practice ensure
+              clients receive practical, high‑impact solutions grounded in real‑world experience and regional insight.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3 style="margin-bottom:0.75rem; color:var(--qc-ochre);">Grounded in Country</h3>
+            <p>
+              Our work is shaped by the landscapes, communities and cultures of Central Australia and the Barkly. We recognise
+              the importance of place, relationships and lived experience in designing approaches that are realistic, respectful
+              and sustainable.
+            </p>
+            <p style="margin-top:0.75rem;">
+              We bring a calm, steady presence to complex environments—listening carefully, engaging widely and working with
+              you to turn ideas into practical, achievable steps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-intro">
+        We focus on practical, high‑impact work that strengthens systems and supports communities. Our services can be
+        tailored to short‑term projects or longer‑term partnerships.
+      </p>
+
+      <div class="services-grid">
+        <div class="card service-card">
+          <h3>Strategic Planning & Policy Development</h3>
+          <ul>
+            <li>Regional and organisational strategies</li>
+            <li>Cross‑agency coordination and alignment</li>
+            <li>Policy analysis, design and review</li>
+            <li>Program logic and implementation planning</li>
+          </ul>
+        </div>
+
+        <div class="card service-card">
+          <h3>Service Delivery Improvement</h3>
+          <ul>
+            <li>Program review and redesign</li>
+            <li>Operational improvement and integration</li>
+            <li>Workforce capability and planning</li>
+            <li>Community‑centred service models</li>
+          </ul>
+        </div>
+
+        <div class="card service-card">
+          <h3>Stakeholder Engagement & Consultation</h3>
+          <ul>
+            <li>Community engagement across remote and regional NT</li>
+            <li>Multi‑stakeholder facilitation and workshops</li>
+            <li>Co‑design processes and collaborative planning</li>
+            <li>Culturally informed and regionally grounded approaches</li>
+          </ul>
+        </div>
+
+        <div class="card service-card">
+          <h3>Economic & Regional Development</h3>
+          <ul>
+            <li>Regional development strategies</li>
+            <li>Support for industry, councils and NGOs</li>
+            <li>Local capacity‑building initiatives</li>
+            <li>Place‑based, practical solutions</li>
+          </ul>
+        </div>
+
+        <div class="card service-card">
+          <h3>Emergency Management & Incident Planning</h3>
+          <ul>
+            <li>AIIMS‑aligned planning and documentation</li>
+            <li>Cross‑agency coordination frameworks</li>
+            <li>Preparedness and response planning</li>
+            <li>Integration with regional service systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="highlight-strip">
+    <div class="container highlight-strip-inner">
+      <span>Over 30 years of leadership, policy and service delivery experience across Central Australia and the Barkly.</span>
+      <a href="#contact" class="btn-secondary" style="border-color:#ffddc2;">Discuss a project</a>
+    </div>
+  </div>
+
+ <!-- CONTACT US -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-intro">
+      To discuss a project, request a proposal or explore how we might work together, please get in touch.
+    </p>
+
+    <div class="contact-grid">
+      <div class="card contact-details">
+        <p><strong>Quondong Consulting</strong></p>
+        <p>Alice Springs, Northern Territory</p>
+        <br>
+        <p><strong>Email:</strong> quondongconsulting@outlook.com</p>
+        <p><strong>Phone:</strong> 0428 849 520</p>
+        <br>
+        <p>
+          We work with clients across Central Australia, the Barkly and beyond. Online and hybrid engagement options
+          are available for geographically dispersed teams.
+        </p>
+      </div>
+
+      <div class="card">
+        <form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name">
+          </div>
+          <div>
+            <label for="org">Organisation</label>
+            <input id="org" name="organisation" type="text" placeholder="Your organisation">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about your project or enquiry."></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn-primary">Send enquiry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© Quondong Consulting. All rights reserved.</span>
+    <span>Central Australia & Barkly Regions</span>
+  </div>
+</footer>
+
+</body>
+</html>
