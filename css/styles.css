@@ -264,7 +264,7 @@ footer a:hover {
   background-image: url("../images/westmacsatsunset.jpg");
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: relative;   /* ← THIS FIXES EVERYTHING */
   padding: 4rem 0;
 }
 
