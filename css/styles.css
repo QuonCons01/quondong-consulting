@@ -363,3 +363,11 @@ footer a:hover {
 #contact * {
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.65); /* soften the logo */
+  backdrop-filter: blur(4px);         /* gentle blur for polish */
+  z-index: 1;
+}
