@@ -279,7 +279,8 @@ footer a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: transparent;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(2px);
   z-index: 1;
 }
 
