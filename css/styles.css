@@ -267,10 +267,7 @@ footer a:hover {
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 /* SERVICES SECTION BACKGROUND */
 #services {
-  background-image: url("../images/westmacsatsunset.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;   /* ← THIS FIXES EVERYTHING */
+  background: white; /* or var(--qc-light) */
   padding: 4rem 0;
 }
 
