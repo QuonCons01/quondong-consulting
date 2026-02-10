@@ -342,3 +342,11 @@ footer a:hover {
 #services li {
   color: white !important;
 }
+#contact {
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: 260px; /* adjust size as needed */
+  background-position: center 40%; /* adjust vertical position */
+  padding: 4rem 0;
+  position: relative;
+}
