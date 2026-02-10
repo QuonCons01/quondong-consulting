@@ -181,8 +181,11 @@ footer a:hover {
 
 /* PAGE WATERMARK */
 .page-watermark {
-  .page-watermark {
-  /* remove all watermark styling */
+  background-image: url("../images/redtails.jpg");
+  background-repeat: no-repeat;
+  background-size: 180px;
+  background-position: bottom right;
+  filter: opacity(15%);
 }
 
 .page-watermark::before {
