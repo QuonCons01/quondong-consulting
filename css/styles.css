@@ -339,8 +339,10 @@ footer a:hover {
 #services h2,
 #services h3,
 #services p,
-#services li {
-  color: white !important;
+#services li,
+#services a {
+  color: black !important;
+  text-shadow: none !important;
 }
 #contact {
   background-image: url("../images/logo.png");
