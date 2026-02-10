@@ -211,3 +211,63 @@ footer a:hover {
   height: 32px;
   object-fit: contain;
 }
+/* SERVICE CARD HOVER EFFECT */
+.service-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+/* FADE-IN ANIMATION */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Staggered animation timing */
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+/* SERVICES SECTION BACKGROUND */
+#services {
+  background-image: url("images/westmacsatsunset.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+#services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.85); /* soft white overlay */
+  backdrop-filter: blur(2px);
+}
+
+#services > .container {
+  position: relative;
+  z-index: 2;
+}
+/* SECTION DIVIDER */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--qc-blue), transparent);
+  margin: 3rem 0;
+}
