@@ -344,9 +344,9 @@ footer a:hover {
 }
 #contact {
   background-image: url("../images/logo.png");
+  background-size: cover;        /* fills the entire section */
+  background-position: center;   /* keeps it centred */
   background-repeat: no-repeat;
-  background-size: 260px; /* adjust size as needed */
-  background-position: center 40%; /* adjust vertical position */
   padding: 4rem 0;
   position: relative;
 }
