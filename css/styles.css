@@ -46,8 +46,8 @@ header {
   gap: 1rem;
 }
 
-.nav-logo {
-  max-width: 25%;
+.nav-left img {
+  max-width: 60px;   /* adjust smaller if needed */
   height: auto;
 }
 
