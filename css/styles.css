@@ -327,13 +327,14 @@ footer a:hover {
   text-shadow: none !important;
 }
 #contact {
-  background-image: url("../images/logo.png");
-  background-size: cover;        /* fills the entire section */
-  background-position: center;   /* keeps it centred */
+  background-image: url("../images/gapatsunset.jpg");
+  background-size: cover;
+  background-position: center 60%;
   background-repeat: no-repeat;
   padding: 4rem 0;
   position: relative;
 }
+
 #contact,
 #contact h1,
 #contact h2,
@@ -351,14 +352,11 @@ footer a:hover {
 #contact * {
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
-#contact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.65); /* soften the logo */
-  backdrop-filter: blur(4px);         /* gentle blur for polish */
-  z-index: 1;
+
+#contact * {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
+
 #contact > .container {
   position: relative;
   z-index: 2;
