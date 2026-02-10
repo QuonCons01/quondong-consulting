@@ -267,7 +267,11 @@ footer a:hover {
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 /* SERVICES SECTION BACKGROUND */
 #services {
-  background: white; /* or var(--qc-light) */
+  background-image: url("../images/gapatsunset.jpg");
+  background-size: cover;
+  background-position: center 60%; /* adjust crop if needed */
+  background-repeat: no-repeat;
+  position: relative;
   padding: 4rem 0;
 }
 
