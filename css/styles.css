@@ -334,3 +334,11 @@ footer a:hover {
 #about * {
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
+#services,
+#services h1,
+#services h2,
+#services h3,
+#services p,
+#services li {
+  color: white !important;
+}
