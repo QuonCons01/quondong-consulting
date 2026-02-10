@@ -172,10 +172,10 @@ footer a:hover {
 
 .hero-banner {
   width: 100%;
-  height: 420px; /* perfect banner height */
+  height: 420px;
   background-image: url("../images/hero-photo.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 70%; /* shows more foreground, less sky */
   background-repeat: no-repeat;
 }
 
