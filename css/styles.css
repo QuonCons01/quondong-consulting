@@ -157,14 +157,7 @@ footer a:hover {
   text-decoration: underline;
 }
 .footer-watermark {
-  background-image: url("../images/redtails.jpg");
-  background-repeat: no-repeat;
-  background-size: 120px; /* adjust size */
-  background-position: center bottom;
-  opacity: 0.15; /* safe because it applies ONLY to the image */
-  width: 100%;
-  height: 150px;
-  pointer-events: none;
+  background: none !important;
 }
 /* ============================
    CUSTOM IMAGE SECTIONS
