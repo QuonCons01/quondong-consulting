@@ -164,7 +164,7 @@ footer a:hover {
 /* HERO BANNER */
 .hero-banner {
   width: 100%;
-  height: 260px; /* or 320px if you want bigger */
+  height: 260px;
   background-image: url("../images/hero-photo.jpg");
   background-size: cover;
   background-position: center;
@@ -172,8 +172,21 @@ footer a:hover {
 }
 
 /* PAGE WATERMARK */
+.page-watermark {
+  position: relative;
+  background-image: url("../images/redtails.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 300px;
+}
+
 .page-watermark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: none;
+  pointer-events: none;
+  z-index: 0;
 }
 /* ============================
    SERVICES SECTION
@@ -241,7 +254,7 @@ footer a:hover {
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 /* SERVICES SECTION BACKGROUND */
 #services {
-  background-image: url("images/westmacsatsunset.jpg");
+  background-image: url("../images/westmacsatsunset.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -252,8 +265,9 @@ footer a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.85); /* soft white overlay */
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(2px);
+  z-index: 1;
 }
 
 #services > .container {
