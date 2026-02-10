@@ -172,11 +172,11 @@ footer a:hover {
 
 /* PAGE WATERMARK */
 .page-watermark {
-  position: relative;
-  background-image: url("../images/redtails.jpg");
+  background-image: url("images/redtails.jpg");
+  background-size: 400px;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 300px;
+  opacity: 0.15;
 }
 
 .page-watermark::before {
