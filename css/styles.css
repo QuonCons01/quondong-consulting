@@ -185,7 +185,6 @@ footer a:hover {
   background-repeat: no-repeat;
   background-size: 180px;
   background-position: bottom right;
-  filter: opacity(15%);
 }
 
 .page-watermark::before {
