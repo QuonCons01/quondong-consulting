@@ -177,14 +177,6 @@ footer a:hover {
   background: none !important;
 }
 
-.page-watermark::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: none;
-  pointer-events: none;
-  z-index: 0;
-}
 /* ============================
    SERVICES SECTION
    ============================ */
