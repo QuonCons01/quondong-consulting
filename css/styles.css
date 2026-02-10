@@ -322,8 +322,10 @@ footer a:hover {
 #about h2,
 #about h3,
 #about p,
-#about li,
-#about span,
-#about strong {
+#about li {
   color: white !important;
+}
+
+#about * {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
