@@ -271,3 +271,9 @@ footer a:hover {
   background: linear-gradient(to right, transparent, var(--qc-blue), transparent);
   margin: 3rem 0;
 }
+.service-icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--qc-blue);
+  flex-shrink: 0;
+}
