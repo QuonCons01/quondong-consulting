@@ -159,6 +159,17 @@ footer a:hover {
 .footer-watermark {
   background: none !important;
 }
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 1.5rem 0;
+  width: 100%;
+}
+.footer-abn {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: white; /* adjust if your footer uses dark text */
+}
 /* ============================
    CUSTOM IMAGE SECTIONS
    ============================ */
