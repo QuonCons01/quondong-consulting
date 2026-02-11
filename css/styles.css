@@ -361,3 +361,6 @@ footer a:hover {
   position: relative;
   z-index: 2;
 }
+#contact p {
+  color: white !important;
+}
