@@ -385,3 +385,36 @@ footer a {
   color: #ffffff !important;
   text-decoration: underline;
 }
+/* Restore gapatsunset as the Contact section background and keep text on top */
+#contact {
+  background-image: url("../images/gapatsunset.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure the content sits above any pseudo overlays */
+#contact > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* If you previously added a ::before overlay that hides content, neutralise it */
+#contact::before {
+  content: none !important;
+}
+
+/* Make contact text readable (adjust color if needed) */
+#contact,
+#contact h1,
+#contact h2,
+#contact h3,
+#contact p,
+#contact a,
+#contact li {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6) !important;
+}
