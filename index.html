@@ -28,13 +28,14 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+<script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('show');
+    }
+  </script>
 </head>
-  <script>
-function toggleMenu() {
-  const menu = document.querySelector('nav ul');
-  menu.classList.toggle('show');
-}
-</script>
+
 <body>
 <div class="page-watermark">
   <div class="hero-banner"></div>
@@ -250,40 +251,6 @@ function toggleMenu() {
   </div>
 
  <!-- CONTACT US -->
-<section id="contact">
-  <div class="container">
-
-    <h2>Contact Us</h2>
-
-    <p><strong>Quondong Consulting</strong><br>
-    ABN: 30 829 378 977</p>
-
-    <p class="section-intro">
-      To discuss a project, request a proposal or explore how we might work together, please get in touch.
-    </p>
-
-    <div class="contact-grid">
-
-      <!-- Contact Details Card -->
-      <div class="card contact-details">
-        <p><strong>Quondong Consulting</strong></p>
-        <p>Alice Springs, Northern Territory</p>
-        <br>
-        <p><strong>Email:</strong> quondongconsulting@outlook.com</p>
-        <p><strong>Phone:</strong> 0428 849 520</p>
-        <br>
-        <p>
-          We work with clients across Central Australia, the Barkly and beyond. Online and hybrid engagement options
-          are available for geographically dispersed teams.
-        </p>
-      </div>
-
-            </div>
-
-    </div> <!-- end contact-grid -->
-
-  </div> <!-- end container -->
-</section>
 
 </main>
 
@@ -305,6 +272,7 @@ function toggleMenu() {
 </body>
 
 </html>
+
 
 
 
