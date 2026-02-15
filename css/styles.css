@@ -340,39 +340,33 @@ footer a:hover {
 #contact {
   background-image: url("../images/gapatsunset.jpg");
   background-size: cover;
-  background-position: center 60%;
+  background-position: center;
   background-repeat: no-repeat;
   padding: 4rem 0;
   position: relative;
-}
-
-#contact,
-#contact h1,
-#contact h2,
-#contact h3,
-#contact p,
-#contact li,
-#contact a {
-  color: white !important;
-}
-
-#contact * {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-}
-
-#contact * {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-}
-
-#contact * {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  overflow: hidden;
 }
 
 #contact > .container {
   position: relative;
   z-index: 2;
 }
-#contact p {
+
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+#contact,
+#contact h2,
+#contact p,
+#contact a,
+#contact li,
+#contact input,
+#contact textarea {
   color: white !important;
 }
 footer,
