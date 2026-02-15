@@ -45,7 +45,7 @@ function toggleMenu() {
     <h2>Contact Us</h2>
     <p>If you’d like to discuss a project, request support, or explore how Quondong Consulting can assist your organisation, please get in touch.</p>
 
-   <form action="https://formspree.io/f/mqedqdpy" method="POST" class="contact-form">
+  <form id="contact-form" action="https://formspree.io/f/mqedqdpy" method="POST" class="contact-form">
 
   <!-- Visible fields -->
   <input type="text" name="name" placeholder="Your Name" required>
@@ -57,12 +57,12 @@ function toggleMenu() {
   <input type="hidden" name="timestamp" id="timestamp-field">
   <input type="hidden" name="page_url" value="https://www.quondongconsulting.com.au/contact.html">
 
-  <!-- Spam protection (honeypot field) -->
+  <!-- Spam protection -->
   <input type="text" name="_gotcha" style="display:none">
 
   <button type="submit">Send Enquiry</button>
 
-  <!-- Success message container -->
+  <!-- Success message -->
   <p id="form-success" class="form-success" style="display:none;">
     Thank you — your enquiry has been sent successfully.
   </p>
@@ -73,10 +73,26 @@ function toggleMenu() {
   // Add timestamp automatically
   document.getElementById('timestamp-field').value = new Date().toISOString();
 
-  // Show success message after redirect back from Formspree
-  if (window.location.search.includes("success=true")) {
-    document.getElementById("form-success").style.display = "block";
-  }
+  // Handle Formspree submission without redirect
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("form-success");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      form.reset();
+      successMessage.style.display = "block";
+    }
+  });
 </script>
 
   </div>
