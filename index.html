@@ -276,31 +276,12 @@ function toggleMenu() {
       </div>
 
       <div class="card">
-        <form>
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name">
-          </div>
-          <div>
-            <label for="org">Organisation</label>
-            <input id="org" name="organisation" type="text" placeholder="Your organisation">
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com">
-          </div>
-          <div>
-            <label for="phone">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel">
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us a little about your project or enquiry."></textarea>
-          </div>
-          <div>
-            <button type="submit" class="btn-primary">Send enquiry</button>
-          </div>
-        </form>
+        <form action="mailto:quondongconsulting@outlook.com" method="post" enctype="text/plain">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Enquiry</button>
+</form>
       </div>
     </div>
 
@@ -327,6 +308,7 @@ function toggleMenu() {
 </body>
 
 </html>
+
 
 
 
