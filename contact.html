@@ -45,7 +45,12 @@ function toggleMenu() {
     <h2>Contact Us</h2>
     <p>If you’d like to discuss a project, request support, or explore how Quondong Consulting can assist your organisation, please get in touch.</p>
 
-    https://formspree.io/f/mqedqdpy
+   <form action="https://formspree.io/f/mqedqdpy" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Enquiry</button>
+</form>
 
   </div>
 </section>
