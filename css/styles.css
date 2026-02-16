@@ -582,3 +582,27 @@ footer a {
   position: relative;
   z-index: 2;
 }
+/* FORCE all About Us text to white, overriding card and layout styles */
+#about,
+#about * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+/* Darken About Us background image */
+#about {
+  position: relative;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* increase to 0.45 for darker */
+  z-index: 1;
+}
+
+#about .container,
+#about .container * {
+  position: relative;
+  z-index: 2;
+}
