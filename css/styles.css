@@ -463,3 +463,8 @@ footer a {
   border-radius: 6px;
   font-weight: bold;
 }
+/* Override About Us text colour */
+#about h2,
+#about p {
+  color: black !important;
+}
