@@ -269,12 +269,7 @@ footer a:hover {
 }
 
 #services::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(2px);
-  z-index: 1;
+  background: rgba(0,0,0,0.05);
 }
 
 #services > .container {
