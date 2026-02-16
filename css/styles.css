@@ -476,3 +476,12 @@ footer a {
 .about-bottom {
   color: white !important;
 }
+/* Reset About Us text to white */
+#about {
+  color: white !important;
+}
+
+#about * {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* improves readability */
+}
