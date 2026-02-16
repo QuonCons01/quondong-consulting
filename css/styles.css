@@ -468,3 +468,11 @@ footer a {
 #about p {
   color: black !important;
 }
+/* About Us colour split */
+.about-top {
+  color: black !important;
+}
+
+.about-bottom {
+  color: white !important;
+}
