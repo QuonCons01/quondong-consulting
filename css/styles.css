@@ -488,3 +488,29 @@ footer a {
   color: #ffffff !important;
   text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
+/* Darken About Us background image */
+#about {
+  position: relative;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.40); /* slightly darker */
+  z-index: 1;
+}
+
+/* Ensure all content sits above the overlay */
+#about .container,
+#about .container * {
+  position: relative;
+  z-index: 2;
+}
+
+/* FORCE all About Us text to white — MUST BE LAST */
+#about,
+#about * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
