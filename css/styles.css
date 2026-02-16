@@ -505,3 +505,29 @@ footer a {
   position: relative;
   z-index: 2;
 }
+/* Force ALL About Us text to white */
+#about,
+#about * {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+/* Darken About Us background image */
+#about {
+  position: relative;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35); /* adjust to 0.45 for darker */
+  z-index: 1;
+}
+
+#about > * {
+  position: relative;
+  z-index: 2;
+}
