@@ -526,7 +526,12 @@ footer a {
   background: rgba(0,0,0,0.35); /* adjust to 0.45 for darker */
   z-index: 1;
 }
-
+/* FORCE all About Us text to white */
+#about,
+#about * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
 #about > * {
   position: relative;
   z-index: 2;
