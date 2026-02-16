@@ -269,7 +269,7 @@ footer a:hover {
 }
 
 #services::before {
-  background: rgba(0,0,0,0.05);
+  background: transparent;
 }
 
 #services > .container {
